@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'advice-generator-app';
+  public constructor(private titleService: Title) {
+    this.titleService.setTitle(this.title);
+  }
+  title: string = 'Frontend Mentor | Advice generator app';
 }
