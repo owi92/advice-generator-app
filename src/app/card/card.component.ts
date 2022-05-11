@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card.component.css'],
 })
 export class CardComponent implements OnInit {
-  advNo?: number;
-  advice?: string;
+  advNo: number = 0;
+  advice: string = 'Hit the button to get an advice.';
 
   constructor(public restApi: RestApiService) {}
 
@@ -23,7 +23,5 @@ export class CardComponent implements OnInit {
     this.advice = data.slip.advice;
   }
 
-  ngOnInit(): void {
-    this.onClick();
-  }
+  ngOnInit(): void {}
 }
