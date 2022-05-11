@@ -9,6 +9,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   position: relative;
 }
@@ -41,8 +42,6 @@
   border: none;
   background-color: var(--clr-neon);
   padding: 2.4em;
-  /* width: 3.6rem;
-  height: 3.6rem; */
   bottom: -2rem;
 }
 .card__btn:hover {
@@ -54,7 +53,12 @@
   .card {
     width: 34rem;
     padding: 3em;
-    margin-top: 42%;
+    /* margin-top: 40%; */
+    margin: 0;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .card__heading {
     font-size: 0.8rem;

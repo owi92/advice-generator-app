@@ -19,8 +19,9 @@
 
 body {
   background-color: var(--clr-dk-blue);
+  font-family: var(--ff-man);
+
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--ff-man);
 }
