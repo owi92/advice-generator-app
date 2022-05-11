@@ -1,4 +1,12 @@
+import { RestApiService } from './../shared/rest-api.service';
 import { Component, OnInit } from '@angular/core';
+import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
 
 @Component({
   selector: 'app-card',
@@ -6,11 +14,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card.component.css'],
 })
 export class CardComponent implements OnInit {
-  advNo: number = 117;
-  advice: string =
-    "It is easy to sit up and take notice, what's difficult is getting up and taking action.";
+  isVisible: string = 'true';
+  advNo?: number;
+  advice?: string;
 
-  constructor() {}
+  constructor(public restApi: RestApiService) {}
 
-  ngOnInit(): void {}
+  onClick() {
+    this.isVisible = this.isVisible === 'true' ? 'false' : 'true';
+    this.restApi.getAdvice().subscribe((data) => {
+      this.processData(data);
+    });
+  }
+
+  processData(data: any): void {
+    this.advNo = data.slip.id;
+    this.advice = data.slip.advice;
+  }
+
+  ngOnInit(): void {
+    this.onClick();
+  }
 }
