@@ -1,14 +1,19 @@
 <div class="card">
   <h1 class="card__heading">ADVICE #{{ advNo }}</h1>
-  <p class="card__quote">
-    <q>{{ advice }}</q>
-  </p>
-  <picture class="card__hr">
+  <div role="region" class="card__quote">
+    <q aria-live="polite">{{ advice }}</q>
+  </div>
+  <picture class="card__hr" aria-hidden="true">
     <source
       srcset="assets/images/pattern-divider-desktop.svg"
       media="(min-width: 600px)"
     />
     <img src="assets/images/pattern-divider-mobile.svg" alt="" />
   </picture>
-  <button class="card__btn" (click)="onClick()"></button>
+  <button
+    aria-label="Button. Press to get an advice"
+    role="button"
+    class="card__btn"
+    (click)="onClick()"
+  ></button>
 </div>

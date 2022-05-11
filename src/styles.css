@@ -25,3 +25,8 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.cdk-visually-hidden {
+  opacity: 0;
+  position: absolute;
+}
