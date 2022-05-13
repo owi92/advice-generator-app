@@ -25,7 +25,7 @@ export class CardComponent implements OnInit {
   processData(data: any): void {
     this.advNo = data.slip.id;
     this.advice = data.slip.advice;
-    this.liveAnnouncer.announce(this.advice);
+    this.liveAnnouncer.announce(`Advice ${this.advNo}: ${this.advice}`);
   }
 
   ngOnInit(): void {}
