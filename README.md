@@ -1,27 +1,49 @@
-# AdviceGeneratorApp
+# Frontend Mentor - Advice generator app solution
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
+This is a solution to the [Advice generator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Development server
+## Table of contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
 
-## Code scaffolding
+## Overview
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### The challenge
 
-## Build
+Users should be able to:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Click the button to generate a new advice
+- Have the screen-reader read the new advice when it is fetched (when voiceover is activated)
 
-## Running unit tests
+### Screenshot
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<img src="src/assets/screenshots/scDesktop.png" height="200px">
 
-## Running end-to-end tests
+<img src="src/assets/screenshots/scMobile.png" width="112px" height="200px">
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Links
 
-## Further help
+- Solution URL: https://github.com/owi92/advice-generator-app
+- Live Site URL: https://owi92.github.io/advice-generator-app/
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## My process
+
+### Built with
+
+- angular
+- basic html & css
+
+### What I learned
+
+I learned a little more about accessibility and how to implement angular's live announcer to announce the updated advice on button-press. Aria-live did not work in this project, but I could not figure out why.
+
+### Continued development
+
+I want to focus on and learn more about unit testing, as well as deepen my knowledge about how to create accessible websites/components.
